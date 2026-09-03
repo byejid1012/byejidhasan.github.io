@@ -286,7 +286,7 @@ section{padding:105px 0}
   display:flex;
   text-align:justify;
   justify-content:space-between;
-  align-items:end;
+  align-items:flex-start;
   gap:30px;
   margin-bottom:42px;
 }
@@ -373,7 +373,7 @@ h2 {
 .card:hover{
   transform:translateY(-6px);
   box-shadow:var(--shadow);
-  border-color:#cdd8cf;
+  border-color:#9af0aa;
 }
 .card h3{font-size:1.15rem;margin:8px 0 10px}
 .card p{color:var(--muted);font-size:.94rem}
@@ -384,7 +384,7 @@ h2 {
   padding:5px 9px;
   border-radius:999px;
   font-size:.74rem;
-  color:#536057;
+  color:#5e856b;
 }
 .icon{
   width:42px;height:42px;
