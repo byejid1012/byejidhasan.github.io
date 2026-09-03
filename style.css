@@ -514,3 +514,95 @@ h2{
   color: #95bfa8;
   font-size: 1.1rem;
 }
+
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+
+@media (max-width: 850px) {
+
+  /* Overall page spacing */
+  .container {
+    width: min(100% - 32px, var(--max));
+  }
+
+  section {
+    padding: 70px 0;
+  }
+
+
+  /* Hero becomes vertical */
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding-top: 55px;
+  }
+
+
+  /* Name stays dramatic without overflowing */
+  .name-heading {
+    font-size: clamp(4.2rem, 18vw, 7rem);
+    line-height: .88;
+  }
+
+
+  /* Intro text */
+  .hero-intro {
+    font-size: .98rem;
+    line-height: 1.7;
+  }
+
+
+  /* Subject capsules */
+  .hero-subjects {
+    gap: 8px;
+    max-width: 100%;
+  }
+
+  .hero-subjects span {
+    font-size: .74rem;
+    padding: 7px 12px 7px 16px;
+  }
+
+
+  /* Hero image */
+  .hero-photo-card {
+    min-height: 380px;
+  }
+
+  .hero-photo {
+    min-height: 380px;
+  }
+
+
+  /* About section */
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-text p {
+    text-align: left;
+    font-size: .96rem;
+    line-height: 1.75;
+  }
+
+
+  /* Contact section */
+  .contact {
+    padding: 40px 24px;
+    border-radius: 24px;
+  }
+
+  .contact-actions {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* Prevent text from causing horizontal scrolling */
+  h1,
+  h2,
+  h3,
+  p {
+    overflow-wrap: break-word;
+  }
+}
