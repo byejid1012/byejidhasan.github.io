@@ -265,6 +265,7 @@ h1 {
 .r6{top:196px;transform:rotate(-4deg)}
 .r7{top:232px;transform:rotate(5deg)}
 .r8{top:268px;transform:rotate(-7deg)}
+
 .card-label{
   position:absolute;
   bottom:22px;left:22px;
@@ -278,6 +279,8 @@ h1 {
 }
 
 /* ---------- sections ---------- */
+
+
 section{padding:105px 0}
 .section-head{
   display:flex;
@@ -295,10 +298,20 @@ section{padding:105px 0}
   text-transform:uppercase;
 }
 h2{
-  font-size:clamp(2rem,4vw,3.2rem);
-  letter-spacing:-.045em;
-  line-height:1.05;
-  margin-top:8px;
+  .about-heading {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.2rem, 5vw, 5rem);
+  line-height: .95;
+  letter-spacing: -.045em;
+  font-weight: 500;
+  margin: 12px 0 0;
+  max-width: 320px;
+}
+
+.about-heading span {
+  color: var(--accent);
+  font-style: italic;
+}
 }
 .section-head p{max-width:510px;color:var(--muted)}
 
@@ -582,6 +595,8 @@ h2{
 
   .about-text p {
     text-align: left;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: var(--accent-2);
     font-size: .96rem;
     line-height: 1.75;
   }
