@@ -375,7 +375,7 @@ h2 {
   box-shadow:var(--shadow);
   border-color:#9af0aa;
 }
-.card h3{font-size:1.15rem;margin:8px 0 10px}
+.card h3{font-size:1.15rem;font-family:"Georgia", "Times New Roman", serif; margin:8px 0 10px}
 .card p{color:var(--muted);font-size:.94rem}
 .tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
 .tag{
