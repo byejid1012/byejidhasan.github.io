@@ -689,40 +689,56 @@ h2 {
 
 /* ---------- MOBILE ---------- */
 
+/* ---------- MOBILE FLIP FIX ---------- */
+
 @media (max-width:850px) {
 
-  .capsule-row {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-
-    gap: 24px;
-
-    margin-top: 38px;
+  /* Disable desktop hover movement on touch screens */
+  .capsule:hover {
+    transform: none;
   }
 
+  /* Disable hover-only visual changes */
+  .capsule:hover .capsule-front {
+    box-shadow:
+      0 18px 40px rgba(24,32,27,.10),
+      inset 0 1px 0 rgba(255,255,255,.8);
+
+    border-color: rgba(223,229,223,.9);
+  }
+
+  .capsule:hover .capsule-colour {
+    filter: none;
+  }
+
+  .capsule:hover .capsule-seam {
+    background: rgba(24,32,27,.16);
+  }
+
+  /* Keep the content stable while tapping */
+  .capsule:hover .capsule-icon {
+    transform: none;
+  }
+
+  .capsule:hover .capsule-title {
+    transform: none;
+  }
+
+  .capsule:hover .capsule-line {
+    color: rgba(24,32,27,.76);
+  }
+
+  /* No hover movement on the flipped inner */
+  .capsule.flipped:hover .capsule-inner {
+    transform: rotateY(180deg);
+  }
+
+  /* Make taps behave like taps */
   .capsule {
-    width: min(100%, 260px);
-    height: 320px;
-  }
-
-  .capsule-content {
-    padding: 30px 24px;
-  }
-
-  .capsule-icon {
-    font-size: 28px;
-  }
-
-  .capsule-title {
-    font-size: 1.15rem;
-  }
-
-  .capsule-line {
-    font-size: .76rem;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
 }
-
 
 /* ---------- REDUCED MOTION ---------- */
 
