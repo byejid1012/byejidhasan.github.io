@@ -1330,7 +1330,240 @@ h2 {
 }
 
 
+/* =========================================================
+   CONTACT
+   ========================================================= */
 
+.contact {
+  position: relative;
+  overflow: hidden;
+
+  padding: 52px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.96),
+      rgba(238,241,236,.78)
+    );
+
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow);
+}
+
+/* subtle green edge */
+
+.contact::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 5px;
+  height: 100%;
+
+  background: var(--accent);
+}
+
+/* subtle decorative circle */
+
+.contact::after {
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  right: -120px;
+  top: -130px;
+
+  border: 1px solid rgba(45,106,79,.12);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+/* ---------- CONTACT HEADER ---------- */
+
+.contact h2 {
+  position: relative;
+  z-index: 1;
+
+  margin-top: 8px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.2rem, 5vw, 5rem);
+  line-height: .95;
+
+  letter-spacing: -.045em;
+  font-weight: 500;
+}
+
+.contact h2 span {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.contact p {
+  position: relative;
+  z-index: 1;
+
+  max-width: 610px;
+
+  margin: 18px 0 38px;
+
+  color: var(--muted);
+
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* ---------- CONTACT TABS ---------- */
+
+.contact-actions {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.contact-link {
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 22px;
+
+  background: var(--surface);
+
+  border: 1px solid var(--line);
+  border-radius: 22px;
+
+  box-shadow: 0 10px 30px rgba(24,32,27,.045);
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease,
+    background .3s ease;
+}
+
+/* green line at bottom */
+
+.contact-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background: var(--accent);
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition: transform .35s ease;
+}
+
+.contact-link:hover {
+  transform: translateY(-7px);
+
+  background: #fbfdfb;
+
+  border-color: #a9cdb5;
+
+  box-shadow:
+    0 20px 42px rgba(24,32,27,.09);
+}
+
+.contact-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* ---------- CONTACT ICON ---------- */
+
+.contact-icon {
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 14px;
+
+  background: var(--surface-2);
+  color: var(--accent);
+
+  font-family: "IBM Plex Mono", monospace;
+  font-size: .78rem;
+  font-weight: 700;
+
+  transition:
+    transform .3s ease,
+    background .3s ease;
+}
+
+.contact-link:hover .contact-icon {
+  transform: translateY(-2px) scale(1.05);
+
+  background: #dfeae2;
+}
+
+/* ---------- CONTACT TEXT ---------- */
+
+.contact-link small {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: var(--accent);
+
+  font-family: "IBM Plex Mono", monospace;
+  font-size: .62rem;
+
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.contact-link > span:nth-child(2) {
+  color: var(--text);
+
+  font-size: .88rem;
+  line-height: 1.4;
+}
+
+/* ---------- ARROW ---------- */
+
+.arrow {
+  margin-left: auto;
+
+  color: var(--accent);
+
+  font-size: 1.05rem;
+
+  transition:
+    transform .3s ease;
+}
+
+.contact-link:hover .arrow {
+  transform: translate(3px, -3px);
+}
 
 /* =========================================================
    MOBILE + TABLET
